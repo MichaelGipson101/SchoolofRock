@@ -1,0 +1,23 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.example.schoolofrock.MainActivity">
+    <item
+        android:id="@+id/like_button"
+        android:orderInCategory="100"
+        android:title="@string/like"
+        app:showAsAction="always"
+        android:onClick="addLikedSong"/>
+    <item
+        android:id="@+id/dislike_button"
+        android:orderInCategory="100"
+        android:title="@string/dislike"
+        app:showAsAction="always"
+        android:onClick="addDislikedSong"/>
+    <item
+        android:id="@+id/count_button"
+        android:orderInCategory="100"
+        android:title="@string/count"
+        app:showAsAction="always" />
+
+</menu>
