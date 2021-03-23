@@ -87,11 +87,20 @@ public class DBHandler extends SQLiteOpenHelper {
 
     }
 
-    public int getCountLikes (Integer vote) {
+    public int getCountLikes() {
         SQLiteDatabase db = getWritableDatabase();
 
         String query = "SELECT * FROM " + TABLE_SONG_VOTE +
-                " WHERE " + COLUMN_LIST_VOTE + " = " + "'" + vote + "'";
+                " WHERE " + COLUMN_LIST_VOTE + " = " + "'" + 1 + "'";
+
+        return db.rawQuery(query, null).getCount();
+    }
+
+    public int getCountDislikes() {
+        SQLiteDatabase db = getWritableDatabase();
+
+        String query = "SELECT * FROM " + TABLE_SONG_VOTE +
+                " WHERE " + COLUMN_LIST_VOTE + " = " + "'" + 0 + "'";
 
         return db.rawQuery(query, null).getCount();
     }
