@@ -70,8 +70,8 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
     }
 
     /**
-     * This method gets called when a menu-item in the overflow menu is selected.
-     * @return String that contains count of the number of students who have the selected major.
+     * This method gets called when the count item in the menu is selected.
+     * @return String that contains count of the number of voters who have liked and disliked.
      */
     public void getMessage (MenuItem menuItem) {
         int count = dbHandler.getCountLikes();
